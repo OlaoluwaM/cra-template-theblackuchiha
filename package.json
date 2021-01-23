@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "CRA template plus styled components, framer-motion and custom boilerplate",
   "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlaoluwaM/cra-template-yami.git"
+  },
   "keywords": [
     "framer-motion",
     "styled-components",
