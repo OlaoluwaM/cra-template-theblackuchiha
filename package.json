@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "CRA template plus styled components, framer-motion and custom boilerplate",
   "main": "template.json",
+  "engines": {
+    "node": ">=10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlaoluwaM/cra-template-yami.git"
@@ -14,5 +17,9 @@
     "custom-template"
   ],
   "author": "Olaoluwa Mustapha <jomeemustapha@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "template",
+    "template.json"
+  ]
 }
