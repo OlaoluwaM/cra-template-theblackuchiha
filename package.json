@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-yami-v1",
+  "name": "cra-template-theblackuchiha",
   "version": "1.0.0",
   "description": "CRA template plus styled components, framer-motion and custom boilerplate",
   "main": "template.json",
@@ -8,12 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OlaoluwaM/cra-template-yami.git"
+    "url": "https://github.com/OlaoluwaM/cra-template-yami.git"
   },
   "keywords": [
-    "framer-motion",
-    "styled-components",
-    "create-react-app",
     "custom-template"
   ],
   "author": "Olaoluwa Mustapha <jomeemustapha@gmail.com>",
