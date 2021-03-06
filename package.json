@@ -14,8 +14,7 @@
     "update:major": "npm version major",
     "update:minor": "npm version minor",
     "update:patch": "npm version patch",
-    "publish": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "push:tags": "git push --tags"
   },
   "keywords": [
     "custom-template"
