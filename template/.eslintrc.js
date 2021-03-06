@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+
   // Which environments is your script meant to run <input type="text" name="" id=""/>
   env: {
     browser: true,
