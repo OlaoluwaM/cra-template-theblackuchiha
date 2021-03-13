@@ -1,0 +1,71 @@
+import PropTypes from 'prop-types';
+
+import { default as styled, css } from 'styled-components';
+import { m as motion, AnimateSharedLayout } from 'framer-motion';
+
+const variants = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: { when: 'beforeChildren' },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+    },
+  },
+};
+
+const Overlay = styled(motion.div).attrs({
+  'data-testid': 'loader',
+  variants: variants,
+  initial: 'hidden',
+  animate: 'visible',
+  exit: 'exit',
+  key: 'overlay',
+  className: 'loader',
+})`
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+
+  ${({ isFullscreen }) =>
+    isFullscreen
+      ? css`
+          position: fixed;
+          height: 100%;
+        `
+      : css`
+          position: absolute;
+          height: 45%;
+        `}
+`;
+
+const Spinner = styled(motion.div)``;
+
+export default function Loading({ fullscreen = false, layoutId, children }) {
+  const layoutObj = layoutId ? { layoutId } : { layout: true };
+
+  return (
+    <AnimateSharedLayout>
+      <Overlay isFullscreen={fullscreen} {...layoutObj}>
+        {children ?? <Spinner layout />}
+      </Overlay>
+    </AnimateSharedLayout>
+  );
+}
+
+Loading.propTypes = {
+  fullscreen: PropTypes.bool,
+  layoutId: PropTypes.string,
+  children: PropTypes.element,
+};
