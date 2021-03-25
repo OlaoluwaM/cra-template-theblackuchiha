@@ -1,4 +1,4 @@
-import App from './components/App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
 import { render } from 'react-dom';
