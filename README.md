@@ -4,6 +4,7 @@ This is my custom template for create-react-app
 
 Use it by running
 <code>npm init react-app [project-name] --template theblackuchiha</code>
+<code>npx create-react-app [project-name] --template theblackuchiha</code>
 
 ## Update
 

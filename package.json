@@ -11,10 +11,9 @@
     "url": "https://github.com/OlaoluwaM/cra-template-yami.git"
   },
   "scripts": {
-    "update:major": "npm version major",
-    "update:minor": "npm version minor",
-    "update:patch": "npm version patch",
-    "push:tags": "git push --tags"
+    "prepublishOnly": "npm version $npm_config_type",
+    "publish": "npm publish",
+    "postpublish": "git push origin && git push --tags"
   },
   "keywords": [
     "custom-template"
