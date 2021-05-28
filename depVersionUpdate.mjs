@@ -13,6 +13,7 @@ const templateJSOnFile = JSON.parse(
   await fsPromise.readFile('./template.json', { encoding: 'utf-8' })
 );
 
+// TODO add support for devDependencies
 const dependencies = Object.entries(templateJSOnFile.package.dependencies);
 
 const promiseResults = await Promise.allSettled(
@@ -31,5 +32,5 @@ const promiseResults = await Promise.allSettled(
 const updatedDeps = promiseResults.map(({ value }) => value);
 templateJSOnFile.package.dependencies = Object.fromEntries(updatedDeps);
 
-await fsPromise.writeFile('./template.json', JSON.stringify(templateJSOnFile));
+await fsPromise.writeFile('./template.json', JSON.stringify(templateJSOnFile, null, 2));
 console.log('Packages updated!');
