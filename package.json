@@ -13,7 +13,7 @@
   "scripts": {
     "prepublishOnly": "npm version $npm_config_type",
     "postpublish": "git push origin && git push --tags",
-    "updateDepVersions": "node depVersionUpdate.mjs"
+    "updateTemplate": "node depVersionUpdate.mjs && node fetchFilesFromCRARepo.mjs"
   },
   "keywords": [
     "custom-template"
